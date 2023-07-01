@@ -87,7 +87,7 @@ xticks(maxit)
 
 
 %% Compute the approximated matrix-based joint centralities ESC / RSC with Gauss
-maxit=1:5;
+maxit=2:5;
 JC_RSC_Matrix_approx=zeros(nL,length(maxit));
 JC_RSC_Matrix_approx_lower_radau=zeros(nL,length(maxit));
 JC_RSC_Matrix_approx_upper_radau=zeros(nL,length(maxit));
@@ -115,7 +115,7 @@ for j=1:length(maxit)
 end
 close(bar)
 
-maxit=1:5;
+maxit=2:5;
 figure(3)
 semilogy(maxit,corr(JC_RSC_Matrix_exact, JC_RSC_Matrix_approx, 'type', 'Kendall'),'LineWidth',2)
 hold on
