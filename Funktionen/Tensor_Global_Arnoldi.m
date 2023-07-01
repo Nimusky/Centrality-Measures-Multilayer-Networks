@@ -19,7 +19,7 @@ for j = 1:m
 
     for i = 1:j
         H(i,j) = trace(V(:,:,i)' * W);
-        W = W - H(i,j) * V(:,:,j);
+        W = W - H(i,j) * V(:,:,i);
     end
 
     H(j+1, j) = norm(W, 'fro');
