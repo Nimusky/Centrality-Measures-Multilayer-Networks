@@ -165,3 +165,25 @@ ylabel("Kendall'scher Koeffizient")
 CorrTenAgg = Corr_CKS(MNC_ESC_Tensor_exact, MNC_RSC_Tensor_exact, MNC_TC_Tensor_exact, MNC_KATZ_Tensor_exact, ...
     Agg_ESC, Agg_RSC, Agg_TC, Agg_KATZ);
 
+
+%% 
+figure(5);
+scatter(MNC_TC_Tensor_exact, Agg_TC, 'filled');
+xlabel('Tensorbasierte Marginal-Node-TC');
+ylabel('Agg. TC');
+
+figure(6);
+scatter(MNC_RSC_Tensor_exact, Agg_RSC, 'filled');
+xlabel('Tensorbasierte Marginal-Node-RSC');
+ylabel('Agg. RSC');
+
+figure(7);
+scatter(MNC_ESC_Tensor_exact, Agg_ESC, 'filled');
+xlabel('Tensorbasierte Marginal-Node-ESC');
+ylabel(' Agg. ESC');
+
+figure(8);
+scatter(MNC_KATZ_Tensor_exact, Agg_KATZ, 'filled');
+xlabel('Tensorbasierte Marginal-Node-Katz');
+ylabel('Agg. Katz');
+
